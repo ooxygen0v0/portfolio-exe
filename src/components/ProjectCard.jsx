@@ -15,7 +15,7 @@ function ProjectCard({ project }) {
         <span className="max-w-32 truncate font-mono text-xs text-slate-500">{project.id}</span>
       </div>
 
-      <h2 className="break-words text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">{project.title}</h2>
+      <h2 className="wrap-break-word text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">{project.title}</h2>
       <p className="mt-4 flex-1 leading-7 text-slate-600 dark:text-slate-400">
         {content.summary}
       </p>
