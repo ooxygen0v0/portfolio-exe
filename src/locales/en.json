@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "home": {
+    "greeting": "Hello, World!",
+    "line1": "Building.",
+    "line2": "Learning.",
+    "line3": "Improving.",
+    "intro": "I'm a computer engineering student who enjoys learning new technologies, building projects, and continuously improving."
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "Hello! I'm a computer engineering student gaining hands-on experience in software development by learning new technologies and building projects.",
+    "journey": "My Journey",
+    "experiences": {
+      "engineering": {
+        "title": "Computer Engineering",
+        "description": "I'm studying computer engineering with a focus on software and computer systems."
+      },
+      "development": {
+        "title": "Software Development",
+        "description": "I've built various programs using Python, Java, and JavaScript."
+      },
+      "systems": {
+        "title": "Systems & Web",
+        "description": "I'm exploring everything from operating systems to React-based web applications."
+      }
+    }
+  }
+}

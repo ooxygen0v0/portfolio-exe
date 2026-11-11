@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <script>
+      (function () {
+        let theme = null;
+
+        try {
+          theme = localStorage.getItem('portfolio-theme');
+        } catch {
+          // localStorage를 사용할 수 없는 경우
+        }
+
+        // 저장된 설정이 없으면 시스템 테마 사용
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches ? 'dark' : 'light';
+        }
+
+        // React 실행 전에 테마 적용
+        document.documentElement.classList.toggle(
+          'dark',
+          theme === 'dark'
+        );
+
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio-exe</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

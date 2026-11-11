@@ -1,0 +1,103 @@
+{
+  "skills": {
+    "title": "Tech Stack",
+    "intro": "Technologies and programming languages I've studied and used in projects.",
+    "count": "Showing {{visible}} of {{total}} technologies",
+    "categories": {
+      "all": "All",
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Data & Tools"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "intro": "Explore projects I've built and exercises I've completed during my studies.",
+    "searchLabel": "Search Projects",
+    "searchPlaceholder": "Search by project or technology...",
+    "count": "Showing {{visible}} of {{total}} projects",
+    "noResults": "No projects found.",
+    "viewDetails": "View Details",
+    "back": "Back to Projects",
+    "notFound": "Project Not Found",
+    "techStack": "Tech Stack",
+    "keyFeatures": "Key Features",
+    "viewGithub": "View on GitHub",
+    "categories": {
+      "all": "All",
+      "web": "Web",
+      "systems": "Systems",
+      "java": "Java"
+    }
+  },
+  "terminal": {
+    "welcome": "Welcome to Portfolio.exe Terminal.",
+    "hint": "Type help to see available commands.",
+    "inputLabel": "Terminal command",
+    "helpTitle": "Available commands:",
+    "commands": {
+      "help": "Show available commands",
+      "whoami": "About the developer",
+      "pwd": "Show current directory",
+      "ls": "List files",
+      "lsProjects": "List projects",
+      "cdProjects": "Enter projects directory",
+      "cdParent": "Go to parent directory",
+      "cat": "Read a virtual file",
+      "skills": "Show technology stack",
+      "projects": "Show project information",
+      "github": "GitHub information",
+      "clear": "Clear terminal history"
+    },
+    "identity": "Computer Engineering Student",
+    "interest": "Interested in software development and computer systems.",
+    "about": "Studying programming, web development, and operating systems.",
+    "tech": "Tech: {{technologies}}",
+    "githubPending": "GitHub profile is not linked yet.",
+    "githubLater": "The profile will be linked during GitHub integration.",
+    "errors": {
+      "unknown": "Command not found: {{command}}",
+      "helpHint": "Type help to see available commands.",
+      "ls": "ls: cannot access '{{path}}'",
+      "cd": "cd: {{path}}: No such directory",
+      "cat": "cat: {{file}}: No such file"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "intro": "Feel free to explore my projects and development experience or reach out through the channels below.",
+    "githubTitle": "GitHub",
+    "githubDescription": "Explore my public repositories and development projects.",
+    "githubNotSet": "GitHub account is not configured.",
+    "openGithub": "Visit GitHub",
+    "copyLink": "Copy Link",
+    "copied": "Profile URL copied.",
+    "copyFailed": "Unable to copy. Please open the profile link directly.",
+    "emailTitle": "Email",
+    "emailDescription": "You can contact me by email.",
+    "sendEmail": "Send Email",
+    "projectsTitle": "Interested in My Projects?",
+    "projectsDescription": "Explore my work in operating systems, Java, and web development.",
+    "viewProjects": "Explore Projects"
+  },
+  "github": {
+    "title": "GitHub",
+    "intro": "My public GitHub repositories and profile.",
+    "configure": "Set your GitHub username in src/config/github.js.",
+    "loading": "Loading GitHub information...",
+    "notFound": "GitHub user not found. Check your username.",
+    "rateLimit": "GitHub API rate limit reached. Please try again later.",
+    "failed": "Could not load GitHub information. Check your connection.",
+    "profileLink": "View GitHub profile",
+    "repositoryCount": "{{count}} public repositories",
+    "empty": "No public repositories to display yet.",
+    "noDescription": "No description provided."
+  },
+  "responsive": {
+    "navigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
+}

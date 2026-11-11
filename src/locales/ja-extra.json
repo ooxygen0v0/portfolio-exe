@@ -1,0 +1,103 @@
+{
+  "skills": {
+    "title": "技術スタック",
+    "intro": "これまで学習し、プロジェクトで使用してきたプログラミング言語や開発技術を紹介します。",
+    "count": "全{{total}}件中{{visible}}件を表示",
+    "categories": {
+      "all": "すべて",
+      "languages": "プログラミング言語",
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "tools": "データ・ツール"
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "intro": "これまでに開発したプロジェクトや、学習の中で取り組んだ実習を紹介します。",
+    "searchLabel": "プロジェクト検索",
+    "searchPlaceholder": "プロジェクト名や技術を検索...",
+    "count": "全{{total}}件中{{visible}}件を表示",
+    "noResults": "該当するプロジェクトがありません。",
+    "viewDetails": "詳細を見る",
+    "back": "プロジェクト一覧に戻る",
+    "notFound": "プロジェクトが見つかりません",
+    "techStack": "使用技術",
+    "keyFeatures": "主な実装機能",
+    "viewGithub": "GitHubで見る",
+    "categories": {
+      "all": "すべて",
+      "web": "Web",
+      "systems": "システム",
+      "java": "Java"
+    }
+  },
+  "terminal": {
+    "welcome": "Portfolio.exe ターミナルへようこそ。",
+    "hint": "help と入力するとコマンド一覧を確認できます。",
+    "inputLabel": "ターミナルコマンド",
+    "helpTitle": "使用可能なコマンド:",
+    "commands": {
+      "help": "コマンド一覧を表示",
+      "whoami": "開発者の自己紹介",
+      "pwd": "現在のディレクトリを表示",
+      "ls": "ファイル一覧を表示",
+      "lsProjects": "プロジェクト一覧を表示",
+      "cdProjects": "プロジェクトディレクトリに移動",
+      "cdParent": "親ディレクトリに移動",
+      "cat": "仮想ファイルの内容を表示",
+      "skills": "技術スタックを表示",
+      "projects": "プロジェクト情報を表示",
+      "github": "GitHubの情報",
+      "clear": "ターミナルの履歴を削除"
+    },
+    "identity": "コンピュータ工学を学ぶ学生です。",
+    "interest": "ソフトウェア開発とコンピュータシステムに関心があります。",
+    "about": "プログラミング、Web開発、OSについて学んでいます。",
+    "tech": "使用技術: {{technologies}}",
+    "githubPending": "GitHubプロフィールはまだ連携されていません。",
+    "githubLater": "GitHub連携の段階でプロフィールを設定する予定です。",
+    "errors": {
+      "unknown": "不明なコマンド: {{command}}",
+      "helpHint": "help と入力してコマンド一覧を確認してください。",
+      "ls": "ls: {{path}} が見つかりません。",
+      "cd": "cd: {{path}} というディレクトリはありません。",
+      "cat": "cat: {{file}} というファイルはありません。"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "intro": "制作したプロジェクトや開発経験をご覧いただけます。ご連絡の際は、以下の連絡先をご利用ください。",
+    "githubTitle": "GitHub",
+    "githubDescription": "公開リポジトリや開発プロジェクトをご覧いただけます。",
+    "githubNotSet": "GitHubアカウントが設定されていません。",
+    "openGithub": "GitHubを見る",
+    "copyLink": "リンクをコピー",
+    "copied": "プロフィールのURLをコピーしました。",
+    "copyFailed": "コピーできませんでした。プロフィールのリンクから直接アクセスしてください。",
+    "emailTitle": "メール",
+    "emailDescription": "メールでご連絡いただけます。",
+    "sendEmail": "メールを送信",
+    "projectsTitle": "プロジェクトに興味がありますか？",
+    "projectsDescription": "OS、Java、Web開発に関するプロジェクトを紹介しています。",
+    "viewProjects": "プロジェクトを見る"
+  },
+  "github": {
+    "title": "GitHub",
+    "intro": "GitHubで公開しているリポジトリとプロフィールを表示します。",
+    "configure": "src/config/github.js にGitHubのユーザー名を入力してください。",
+    "loading": "GitHubの情報を読み込み中...",
+    "notFound": "GitHubアカウントが見つかりません。ユーザー名を確認してください。",
+    "rateLimit": "GitHub APIのリクエスト制限に達しました。しばらくしてからお試しください。",
+    "failed": "GitHubの情報を取得できませんでした。ネットワークを確認してください。",
+    "profileLink": "GitHubプロフィールを見る",
+    "repositoryCount": "公開リポジトリ {{count}}件",
+    "empty": "公開リポジトリはまだありません。",
+    "noDescription": "説明は登録されていません。"
+  },
+  "responsive": {
+    "navigation": "メインナビゲーション",
+    "mobileNavigation": "モバイルメニュー",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる"
+  }
+}
