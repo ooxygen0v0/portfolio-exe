@@ -194,7 +194,15 @@ for (const language of languages) {
   for (const item of [...learningStories, ...languageExperiences]) {
     if (!nonEmptyText(item.translations?.[language]?.title) || !nonEmptyText(item.translations?.[language]?.description)) fail(`${item.id}/${language}: 학습·어학 콘텐츠 누락`)
   }
-  for (const item of projects) if (!nonEmptyText(item.translations?.[language]?.workType)) fail(`${item.id}/${language}: 작업 유형 누락`)
+  for (const item of projects) {
+    const content = item.translations?.[language]
+    if (!nonEmptyText(content?.workType) || !nonEmptyText(content?.cardTitle)) fail(`${item.id}/${language}: 작업 유형/설명형 제목 누락`)
+    if (content?.caseStudy?.map(stage => stage.id).join(',') !== 'goal,process,verification,learning') fail(`${item.id}/${language}: 상세 정보 계층 확인 필요`)
+    if (item.id === 'minios' && !nonEmptyText(content?.verificationContext)) fail(`${language}: miniOS 테스트 설명 누락`)
+    for (const stage of content?.caseStudy ?? []) {
+      if (!Array.isArray(stage.media) || stage.media.some(media => !nonEmptyText(media.src) || !nonEmptyText(media.alt) || !nonEmptyText(media.caption))) fail(`${item.id}/${language}: 실제 자료의 경로/대체 텍스트/설명 누락`)
+    }
+  }
   for (const item of futureProjects) {
     const text = item.translations?.[language]
     if (!futureProjectStatuses.includes(item.status)) fail(`${item.id}: 알 수 없는 계획 상태`)

@@ -24,6 +24,7 @@ function Home() {
           <p className="mb-4 font-mono text-sky-700 dark:text-cyan-400">
             {t('home.greeting')}
           </p>
+          <p className="mb-5 text-lg font-semibold text-slate-900 dark:text-white">{t('ux.author')} <span className="mt-1 block text-sm font-normal text-slate-600 dark:text-slate-400">{t('ux.degree')}</span></p>
 
           <h1 className="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl dark:text-white">
             {t('home.line1')}
@@ -36,7 +37,7 @@ function Home() {
           </h1>
 
           <p className="mt-6 leading-8 text-slate-600 dark:text-slate-400">
-            {t('home.intro')}
+            {t('ux.homeExperience')}
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

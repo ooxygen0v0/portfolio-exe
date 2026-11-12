@@ -83,7 +83,7 @@
     "emailDescription": "이메일을 통해 연락할 수 있습니다.",
     "sendEmail": "이메일 보내기",
     "projectsTitle": "프로젝트가 궁금하신가요?",
-    "projectsDescription": "운영체제, Java, 웹 개발 분야에서 진행한 프로젝트를 소개합니다.",
+    "projectsDescription": "miniOS、Portfolio.exe、Linux 커널 분석·실험을 소개합니다.",
     "viewProjects": "프로젝트 살펴보기"
   },
   "github": {
@@ -104,5 +104,51 @@
     "mobileNavigation": "모바일 메뉴",
     "openMenu": "메뉴 열기",
     "closeMenu": "메뉴 닫기"
+  },
+  "ux": {
+    "author": "주우성",
+    "degree": "컴퓨터공학 전공",
+    "homeExperience": "카투사에서 IT 실무를 경험한 뒤 컴퓨터공학을 공부하며, 운영체제의 동작과 웹 서비스를 직접 구현하고 있습니다.",
+    "overview": "핵심 경험",
+    "sections": "섹션 바로가기",
+    "tests": "과제별 기능 테스트 결과",
+    "passed": "통과",
+    "evidenceTitle": "테스트 원본 자료",
+    "evidenceMissing": "테스트 원본 캡처와 실제 구현 구조도는 아직 이 페이지에 포함되지 않았습니다.",
+    "copyEmail": "이메일 복사",
+    "emailCopied": "이메일 주소를 복사했습니다.",
+    "emailFailed": "복사하지 못했습니다. 표시된 이메일 주소를 직접 선택해 복사해 주세요.",
+    "selectLanguage": "언어 선택",
+    "related": "활용 프로젝트",
+    "study": "학습 경험",
+    "outcomes": {
+      "minios": "작업 실행 순서와 공유 자원 접근을 조정하는 기능 구현",
+      "portfolio-exe": "3개 언어·테마·터미널 구현 및 GitHub Pages 배포",
+      "linux-kernel-analysis": "스케줄링 코드 분석 및 정책·nice 값 실험"
+    },
+    "summary": [
+      {
+        "title": "KATUSA · IT 실무",
+        "detail": "IMO / MOS 25B · 2020–2021",
+        "target": "experience"
+      },
+      {
+        "title": "운영체제 · 직접 구현",
+        "detail": "작업 실행 순서와 동기화 학습",
+        "target": "learning"
+      },
+      {
+        "title": "Portfolio.exe · 웹 개발",
+        "detail": "React · 3개 언어 · GitHub Pages",
+        "target": "development"
+      }
+    ],
+    "transitions": [
+      "IT를 실제 사용하는 환경을 경험한 시기입니다. 사용자 지원과 의사소통의 중요성을 배웠습니다.",
+      "실무 경험 이후 프로그래밍과 컴퓨터공학 기초를 공부하기 시작했습니다. 사용하던 기술의 원리를 코드로 살펴보기 시작한 전환점입니다.",
+      "기초 코딩에서 자료구조·컴퓨터구조로 관심을 넓혔습니다. 실행 결과와 함께 내부 처리 과정을 이해하는 데 집중했습니다.",
+      "개념 학습에서 구현·실험·배포로 범위를 넓혔습니다. 테스트와 관찰 결과로 이해를 확인하고, 직접 만든 웹사이트로 학습을 연결했습니다."
+    ],
+    "testRecord": "기존 실습 기록 기준입니다. 테스트 항목별 내용은 원본 자료 추가 시 함께 제공할 예정입니다."
   }
 }

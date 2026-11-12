@@ -6,14 +6,14 @@ import { projects } from '../data/projects'
 import { aboutLayout } from '../data/aboutLayout'
 import { getLocalized } from '../utils/getLocalized'
 
-const bodyClass = 'max-w-[68ch] space-y-5 text-base leading-8 text-slate-700 dark:text-slate-300 sm:text-lg sm:leading-9 [overflow-wrap:anywhere]'
+const bodyClass = 'max-w-[68ch] space-y-5 text-base leading-[1.8] text-slate-700 dark:text-slate-300 sm:text-lg [overflow-wrap:anywhere]'
 const focusClass = 'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700 dark:focus-visible:outline-cyan-400'
 
 function StoryHeading({ section, number }) {
   return (
     <header className="mb-6">
       <p className="font-mono text-xs tracking-wider text-sky-700 dark:text-cyan-400 sm:text-sm">{number} / {section.label}</p>
-      <h3 id={`biography-${section.id}`} className="mt-3 text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">{section.title}</h3>
+      <h3 id={`biography-${section.id}`} tabIndex={-1} className="mt-3 scroll-mt-28 rounded-sm text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">{section.title}</h3>
     </header>
   )
 }
@@ -27,12 +27,13 @@ function ProjectConnection({ id, language, label, linkLabel }) {
   if (!project) return null
   const content = getLocalized(project, language)
   return (
-    <Link to={`/projects/${project.id}`} className={`group block min-w-0 rounded-xl border border-slate-200 bg-white p-6 transition-colors hover:border-sky-600 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-cyan-400 ${focusClass}`}>
+    <Link to={`/projects/${project.id}`} aria-label={`${project.title} · ${linkLabel}`} className={`group block min-w-0 rounded-xl border border-slate-200 bg-white p-6 transition-colors hover:border-sky-600 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-cyan-400 ${focusClass}`}>
       <p className="font-mono text-xs text-sky-700 dark:text-cyan-400">$ open /projects/{project.id}</p>
       <p className="mt-5 text-xs text-slate-500 dark:text-slate-400">{label}</p>
-      <h4 className="mt-2 text-2xl font-semibold tracking-tight">{project.title}</h4>
+      <h4 className="mt-2 text-xl font-semibold leading-snug tracking-tight">{content.cardTitle}</h4>
+      <p className="mt-2 font-mono text-sm text-sky-700 dark:text-cyan-400">{project.title}</p>
       <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-400">{content.summary}</p>
-      <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-sky-700 dark:text-cyan-400">{linkLabel}<span aria-hidden="true">↗</span></span>
+      <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-sky-700 dark:text-cyan-400">{linkLabel}<span aria-hidden="true">→</span></span>
     </Link>
   )
 }
@@ -113,7 +114,7 @@ function ProfileStory() {
                       <span><span className="mb-2 block text-xs text-slate-500 dark:text-slate-400">{item.id === 'it-practice' ? copy.professional : copy.academic}</span><span className="text-lg font-semibold sm:text-xl">{entry.title}</span></span>
                     </span>
                   </summary>
-                  <p className="max-w-[68ch] pb-7 pl-6 text-base leading-8 text-slate-700 dark:text-slate-300 sm:ml-[192px]">{entry.description}</p>
+                  <p className="max-w-[68ch] pb-7 pl-6 text-base leading-[1.8] text-slate-700 dark:text-slate-300 sm:ml-[192px]">{t(`ux.transitions.${index}`)}</p>
                 </details>
               </li>
             )

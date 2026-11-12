@@ -83,7 +83,7 @@
     "emailDescription": "メールでご連絡いただけます。",
     "sendEmail": "メールを送信",
     "projectsTitle": "プロジェクトに興味がありますか？",
-    "projectsDescription": "OS、Java、Web開発に関するプロジェクトを紹介しています。",
+    "projectsDescription": "miniOS、Portfolio.exe、Linuxカーネルの分析・実験を紹介します。",
     "viewProjects": "プロジェクトを見る"
   },
   "github": {
@@ -104,5 +104,51 @@
     "mobileNavigation": "モバイルメニュー",
     "openMenu": "メニューを開く",
     "closeMenu": "メニューを閉じる"
+  },
+  "ux": {
+    "author": "Woo-sung Joo",
+    "degree": "コンピュータ工学専攻",
+    "homeExperience": "KATUSAでのIT実務経験を経てコンピュータ工学を学び、OSの動作やWebアプリケーションを実装しています。",
+    "overview": "主な経験",
+    "sections": "セクションへ移動",
+    "tests": "課題ごとの機能テスト結果",
+    "passed": "合格",
+    "evidenceTitle": "テストの原本資料",
+    "evidenceMissing": "テスト結果の原本画像と実装に基づく構成図は、まだこのページに掲載していません。",
+    "copyEmail": "メールアドレスをコピー",
+    "emailCopied": "メールアドレスをコピーしました。",
+    "emailFailed": "コピーできませんでした。表示されたアドレスを選択してコピーしてください。",
+    "selectLanguage": "言語を選択",
+    "related": "活用プロジェクト",
+    "study": "学習経験",
+    "outcomes": {
+      "minios": "実行順序と共有資源へのアクセスを調整する機能を実装",
+      "portfolio-exe": "3言語・テーマ・ターミナルを実装しGitHub Pagesに公開",
+      "linux-kernel-analysis": "スケジューリングコード分析と方針・nice値の実験"
+    },
+    "summary": [
+      {
+        "title": "KATUSA · IT実務",
+        "detail": "IMO / MOS 25B · 2020–2021",
+        "target": "experience"
+      },
+      {
+        "title": "OS · 自ら実装",
+        "detail": "実行順序と同期処理を学習",
+        "target": "learning"
+      },
+      {
+        "title": "Portfolio.exe · Web開発",
+        "detail": "React · 3言語 · GitHub Pages",
+        "target": "development"
+      }
+    ],
+    "transitions": [
+      "ITが使われる現場を経験し、利用者支援とコミュニケーションの重要性を学びました。",
+      "実務経験を経て、プログラミングと工学の基礎学習へ。技術の原理をコードで調べる段階に進みました。",
+      "基礎的なコーディングからデータ構造・アーキテクチャへ関心を広げ、結果を生む内部処理に注目しました。",
+      "概念の学習から実装・実験・公開へ。テストや観察で理解を確かめ、Webサイトで学びをつなげました。"
+    ],
+    "testRecord": "既存の実習記録に基づきます。テスト項目の詳細は原本資料と共に追加できます。"
   }
 }

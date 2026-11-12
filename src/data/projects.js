@@ -26,7 +26,7 @@ export const projects = [
     "githubUrl": null,
     "translations": {
       "ko": {
-        "summary": "운영체제 스케줄링 및 동기화 구현",
+        "summary": "여러 작업에 CPU 실행 순서를 배분하고, 공유 자원에 대한 접근을 조정하는 운영체제의 동작을 코드로 구현했습니다.",
         "description": "운영체제의 내부 동작을 이해하기 위해 스케줄링과 동기화 기능을 구현한 학습 프로젝트입니다.",
         "highlights": [
           "Round-Robin 스케줄러 및 READY 큐 구현",
@@ -36,26 +36,36 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "목표",
-            "body": "운영체제 수업에서 배운 프로세스 스케줄링과 동기화를 실제 C 코드로 구현하고, 동작을 테스트로 확인하는 것을 목표로 했습니다."
+            "title": "문제와 목표",
+            "body": "운영체제 수업에서 배운 프로세스 스케줄링과 동기화를 실제 C 코드로 구현하고, 동작을 테스트로 확인하는 것을 목표로 했습니다.",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "직접 구현한 부분",
-            "body": "FIFO READY 큐를 기반으로 Round-Robin 스케줄러를 구현하고, time slice와 종료된 PID·중복 등록을 처리했습니다. 세마포어와 뮤텍스의 대기·소유자 관리 및 BLOCKED→READY 전환도 구현했습니다."
+            "title": "구현 및 분석 과정",
+            "body": "FIFO READY 큐를 기반으로 Round-Robin 스케줄러를 구현하고, time slice와 종료된 PID·중복 등록을 처리했습니다. 세마포어와 뮤텍스의 대기·소유자 관리 및 BLOCKED→READY 전환도 구현했습니다.",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "검증 결과",
-            "body": "miniOS Lab03 테스트 13/13, Lab04 테스트 16/16을 통과했습니다. FCFS와 RR 스케줄링 동작을 비교하는 실습도 진행했습니다."
+            "title": "결과와 검증",
+            "body": "스케줄러와 동기화 기능을 과제 테스트로 확인했습니다. FCFS와 Round-Robin 스케줄링 방식의 동작도 비교했습니다.",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "배운 점",
-            "body": "스케줄링 정책만 구현하는 것보다 프로세스 상태와 큐의 일관성을 지키는 일이 중요하다는 점을 배웠습니다."
+            "body": "스케줄링 정책만 구현하는 것보다 프로세스 상태와 큐의 일관성을 지키는 일이 중요하다는 점을 배웠습니다.",
+            "id": "learning",
+            "media": []
           }
         ],
-        "workType": "구현 프로젝트"
+        "workType": "구현 프로젝트",
+        "cardTitle": "운영체제의 작업 실행과 동기화 구현",
+        "verificationContext": "스케줄러의 작업 선택과 프로세스 상태 관리, 공유 자원을 다루는 동기화 기능을 과제 테스트로 확인했습니다. 아래 수치는 각 과제에서 통과한 테스트 수 / 전체 테스트 수입니다. 실행 속도나 성능 향상률을 뜻하지 않습니다."
       },
       "en": {
-        "summary": "Operating system scheduling and synchronization",
+        "summary": "Implemented how an operating system allocates CPU time among tasks and coordinates access to shared resources.",
         "description": "A learning project implementing scheduling and synchronization mechanisms to better understand operating system internals.",
         "highlights": [
           "Implemented a Round-Robin scheduler and READY queue",
@@ -65,26 +75,36 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "Goal",
-            "body": "Implement the scheduling and synchronization concepts learned in operating systems using C, and verify their behavior with tests."
+            "title": "Problem and goal",
+            "body": "Implement the scheduling and synchronization concepts learned in operating systems using C, and verify their behavior with tests.",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "My implementation",
-            "body": "Built a Round-Robin scheduler with a FIFO ready queue, time slices, and handling of terminated and duplicate PIDs. Also implemented semaphore and mutex wait queues, ownership tracking, and BLOCKED-to-READY transitions."
+            "title": "Implementation and analysis",
+            "body": "Built a Round-Robin scheduler with a FIFO ready queue, time slices, and handling of terminated and duplicate PIDs. Also implemented semaphore and mutex wait queues, ownership tracking, and BLOCKED-to-READY transitions.",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "Verification",
-            "body": "Passed all 13/13 tests in miniOS Lab03 and 16/16 tests in Lab04. Also completed an exercise comparing FCFS and RR scheduling."
+            "title": "Results and verification",
+            "body": "Verified scheduler and synchronization functions through assignment tests and compared the behavior of FCFS and Round-Robin scheduling.",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "What I learned",
-            "body": "Keeping process states and queue contents consistent is just as important as implementing the scheduling policy itself."
+            "body": "Keeping process states and queue contents consistent is just as important as implementing the scheduling policy itself.",
+            "id": "learning",
+            "media": []
           }
         ],
-        "workType": "Implementation project"
+        "workType": "Implementation project",
+        "cardTitle": "Building task scheduling and synchronization",
+        "verificationContext": "Assignment tests checked scheduling, process-state management and synchronization for shared resources. Each value below is the number of tests passed / total tests in that assignment. These are functional checks, not execution-speed or performance-improvement measurements."
       },
       "ja": {
-        "summary": "OSのスケジューリングと同期処理の実装",
+        "summary": "複数の処理にCPUの実行順序を割り当て、共有資源へのアクセスを調整するOSの動作を実装しました。",
         "description": "オペレーティングシステムの内部動作を理解するために、スケジューリングと同期機構を実装した学習プロジェクトです。",
         "highlights": [
           "Round-RobinスケジューラとREADYキューを実装",
@@ -94,23 +114,33 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "目的",
-            "body": "OSの授業で学んだスケジューリングと同期処理をC言語で実装し、テストで動作を検証することを目指しました。"
+            "title": "課題と目標",
+            "body": "OSの授業で学んだスケジューリングと同期処理をC言語で実装し、テストで動作を検証することを目指しました。",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "担当した実装",
-            "body": "FIFOのREADYキューを用いたRound-Robinスケジューラ、タイムスライス、終了済み・重複PIDの処理を実装。セマフォとミューテックスの待機・所有者管理、BLOCKED→READY遷移も実装しました。"
+            "title": "実装・分析の過程",
+            "body": "FIFOのREADYキューを用いたRound-Robinスケジューラ、タイムスライス、終了済み・重複PIDの処理を実装。セマフォとミューテックスの待機・所有者管理、BLOCKED→READY遷移も実装しました。",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "検証結果",
-            "body": "miniOS Lab03で13/13件、Lab04で16/16件のテストに合格しました。FCFSとRRの動作比較も行いました。"
+            "title": "結果と検証",
+            "body": "課題テストでスケジューラと同期機能を確認し、FCFSとRound-Robinの動作も比較しました。",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "学んだこと",
-            "body": "スケジューリング方式だけでなく、プロセス状態とキューの整合性を維持する重要性を学びました。"
+            "body": "スケジューリング方式だけでなく、プロセス状態とキューの整合性を維持する重要性を学びました。",
+            "id": "learning",
+            "media": []
           }
         ],
-        "workType": "実装プロジェクト"
+        "workType": "実装プロジェクト",
+        "cardTitle": "OSの実行順序と同期処理を実装",
+        "verificationContext": "課題テストでスケジューリング、プロセス状態管理、共有資源の同期機能を確認しました。以下は各課題の合格テスト数／全テスト数です。実行速度や性能向上率を示す数値ではありません。"
       }
     },
     "subtitle": "Operating System Simulator",
@@ -134,7 +164,7 @@ export const projects = [
     "translations": {
       "ko": {
         "workType": "구현·배포 프로젝트",
-        "summary": "터미널 콘셉트의 3개 언어 개발자 포트폴리오",
+        "summary": "방문자가 학습 경험과 프로젝트를 쉽게 탐색하도록, 세 언어와 검색·필터를 갖춘 웹사이트를 만들었습니다.",
         "description": "React와 Vite로 제작하고 GitHub Pages에 배포한 개인 포트폴리오입니다. 학습 경험을 콘텐츠로 구성하고, 컴포넌트와 상태 관리로 탐색 기능을 구현했습니다.",
         "highlights": [
           "한국어·영어·일본어 및 라이트·다크 모드",
@@ -145,26 +175,35 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "목표",
-            "body": "학습과 구현 경험을 한곳에 정리하고, 방문자가 대표 작업과 연락처를 탐색할 수 있는 사이트를 만들었습니다."
+            "title": "문제와 목표",
+            "body": "학습과 구현 경험을 한곳에 정리하고, 방문자가 대표 작업과 연락처를 탐색할 수 있는 사이트를 만들었습니다.",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "직접 수행한 작업",
-            "body": "React 컴포넌트, 페이지 라우팅, 상태 관리에 다국어와 테마를 결합했습니다. 터미널 명령 처리와 GitHub 통신 로직을 UI에서 분리했습니다."
+            "title": "구현 및 분석 과정",
+            "body": "React 컴포넌트, 페이지 라우팅, 상태 관리에 다국어와 테마를 결합했습니다. 터미널 명령 처리와 GitHub 통신 로직을 UI에서 분리했습니다.",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "확인한 결과",
-            "body": "GitHub Pages에 배포했습니다. 소스코드와 실제 사이트를 아래 링크에서 확인할 수 있습니다."
+            "title": "결과와 검증",
+            "body": "GitHub Pages에 배포했습니다. 소스코드와 실제 사이트를 아래 링크에서 확인할 수 있습니다.",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "배운 점",
-            "body": "개별 기능의 동작뿐 아니라 다국어 콘텐츠, 화면 크기, 탐색 흐름을 함께 고려하며 기능과 콘텐츠를 구성하는 경험을 했습니다."
+            "body": "개별 기능의 동작뿐 아니라 다국어 콘텐츠, 화면 크기, 탐색 흐름을 함께 고려하며 기능과 콘텐츠를 구성하는 경험을 했습니다.",
+            "id": "learning",
+            "media": []
           }
-        ]
+        ],
+        "cardTitle": "학습과 개발 경험을 탐색하는 포트폴리오"
       },
       "en": {
         "workType": "Built and deployed project",
-        "summary": "A developer portfolio with a terminal concept and three languages",
+        "summary": "Built a website with three languages, search and filters to help visitors explore my learning and projects.",
         "description": "A personal portfolio built with React and Vite and deployed on GitHub Pages. I organized learning experiences as content and used components and state to implement navigation and discovery.",
         "highlights": [
           "Korean, English, and Japanese; light and dark themes",
@@ -175,26 +214,35 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "Goal",
-            "body": "Create one place for learning and implementation experiences, with routes to representative work and contact information."
+            "title": "Problem and goal",
+            "body": "Create one place for learning and implementation experiences, with routes to representative work and contact information.",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "My work",
-            "body": "Combined React components, routing, and state with localization and themes. Separated terminal commands and GitHub requests from UI."
+            "title": "Implementation and analysis",
+            "body": "Combined React components, routing, and state with localization and themes. Separated terminal commands and GitHub requests from UI.",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "Results",
-            "body": "Deployed on GitHub Pages. The source and live website are linked below."
+            "title": "Results and verification",
+            "body": "Deployed on GitHub Pages. The source and live website are linked below.",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "What I learned",
-            "body": "Practiced organizing features and content together, considering languages, screen sizes, and navigation as well as individual features."
+            "body": "Practiced organizing features and content together, considering languages, screen sizes, and navigation as well as individual features.",
+            "id": "learning",
+            "media": []
           }
-        ]
+        ],
+        "cardTitle": "A portfolio for exploring my development journey"
       },
       "ja": {
         "workType": "実装・公開プロジェクト",
-        "summary": "ターミナルをモチーフにした3言語のポートフォリオ",
+        "summary": "訪問者が学習経験やプロジェクトを探せるよう、3言語と検索・フィルターを備えたサイトを制作しました。",
         "description": "ReactとViteで制作しGitHub Pagesに公開した個人ポートフォリオです。学習経験をコンテンツに整理し、コンポーネントと状態管理で閲覧機能を実装しました。",
         "highlights": [
           "韓国語・英語・日本語とライト・ダークモード",
@@ -205,22 +253,31 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "目的",
-            "body": "学習・実装経験をまとめ、代表的な取り組みと連絡先を探せるサイトを目指しました。"
+            "title": "課題と目標",
+            "body": "学習・実装経験をまとめ、代表的な取り組みと連絡先を探せるサイトを目指しました。",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "取り組んだ内容",
-            "body": "Reactのコンポーネント、ルーティング、状態管理に多言語とテーマを組み合わせ、コマンド処理とAPI通信をUIから分離しました。"
+            "title": "実装・分析の過程",
+            "body": "Reactのコンポーネント、ルーティング、状態管理に多言語とテーマを組み合わせ、コマンド処理とAPI通信をUIから分離しました。",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "結果",
-            "body": "GitHub Pagesに公開しました。以下のリンクからソースとサイトを確認できます。"
+            "title": "結果と検証",
+            "body": "GitHub Pagesに公開しました。以下のリンクからソースとサイトを確認できます。",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "学んだこと",
-            "body": "機能だけでなく言語、画面サイズ、閲覧の流れも考え、機能とコンテンツを共に構成する経験を得ました。"
+            "body": "機能だけでなく言語、画面サイズ、閲覧の流れも考え、機能とコンテンツを共に構成する経験を得ました。",
+            "id": "learning",
+            "media": []
           }
-        ]
+        ],
+        "cardTitle": "学習と開発経験を伝えるポートフォリオ"
       }
     }
   },
@@ -240,7 +297,7 @@ export const projects = [
     "translations": {
       "ko": {
         "workType": "기술 분석·실험",
-        "summary": "실제 Linux 커널의 스케줄링 흐름과 동작 탐구",
+        "summary": "실제 커널 소스를 읽고 스케줄링 정책과 nice 값을 실험하며, 실행 순서가 정해지는 과정을 살펴보았습니다.",
         "description": "직접 개발한 소프트웨어가 아닌 커널 소스 분석·실험 사례입니다. 학습용 miniOS 구현과 구분하여 실제 Linux의 스케줄링·프로세스·동기화 코드를 조사했습니다.",
         "highlights": [
           "스케줄링 흐름과 관련 자료구조 분석",
@@ -249,26 +306,35 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "목표",
-            "body": "운영체제 이론이 실제 Linux 커널에서 어떻게 표현되는지 소스와 실험을 통해 살펴보았습니다."
+            "title": "문제와 목표",
+            "body": "운영체제 이론이 실제 Linux 커널에서 어떻게 표현되는지 소스와 실험을 통해 살펴보았습니다.",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "직접 수행한 작업",
-            "body": "스케줄링 흐름과 자료구조를 분석하고 프로세스·동기화 관련 코드를 조사했습니다. 스케줄링 정책과 nice 값에 관한 실험을 진행했습니다."
+            "title": "구현 및 분석 과정",
+            "body": "스케줄링 흐름과 자료구조를 분석하고 프로세스·동기화 관련 코드를 조사했습니다. 스케줄링 정책과 nice 값에 관한 실험을 진행했습니다.",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "확인한 결과",
-            "body": "실험 결과를 바탕으로 시스템 동작을 관찰했습니다. 성능 개선을 구현한 프로젝트로 제시하지 않으며, 별도의 정량적 성능 수치는 기재하지 않았습니다."
+            "title": "결과와 검증",
+            "body": "실험 결과를 바탕으로 시스템 동작을 관찰했습니다. 성능 개선을 구현한 프로젝트로 제시하지 않으며, 별도의 정량적 성능 수치는 기재하지 않았습니다.",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "배운 점",
-            "body": "학습용 구현과 실제 커널의 코드를 함께 살펴보며 이론적 개념, 코드의 흐름, 관찰 결과를 연결하는 연습을 했습니다."
+            "body": "학습용 구현과 실제 커널의 코드를 함께 살펴보며 이론적 개념, 코드의 흐름, 관찰 결과를 연결하는 연습을 했습니다.",
+            "id": "learning",
+            "media": []
           }
-        ]
+        ],
+        "cardTitle": "Linux가 작업을 실행하는 방식 탐구"
       },
       "en": {
         "workType": "Technical analysis and experiments",
-        "summary": "Exploring scheduling flow and behavior in the Linux kernel",
+        "summary": "Read kernel source and experimented with scheduling policies and nice values to investigate how execution order is determined.",
         "description": "A kernel source study and experiment case, not software I developed. Distinct from my miniOS implementation, this work investigates scheduling, process, and synchronization code in Linux.",
         "highlights": [
           "Analysis of scheduling flow and related data structures",
@@ -277,26 +343,35 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "Goal",
-            "body": "Examine how operating systems concepts appear in the Linux kernel through source analysis and experiments."
+            "title": "Problem and goal",
+            "body": "Examine how operating systems concepts appear in the Linux kernel through source analysis and experiments.",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "My work",
-            "body": "Analyzed scheduling flow and data structures, investigated process and synchronization code, and conducted experiments involving scheduling policies and nice values."
+            "title": "Implementation and analysis",
+            "body": "Analyzed scheduling flow and data structures, investigated process and synchronization code, and conducted experiments involving scheduling policies and nice values.",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "Results",
-            "body": "Observed system behavior through experiment results. This is not presented as a performance optimization implementation, and no quantitative improvement is claimed."
+            "title": "Results and verification",
+            "body": "Observed system behavior through experiment results. This is not presented as a performance optimization implementation, and no quantitative improvement is claimed.",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "What I learned",
-            "body": "Practiced connecting theoretical concepts, code flow, and observations by studying both a learning implementation and a real kernel."
+            "body": "Practiced connecting theoretical concepts, code flow, and observations by studying both a learning implementation and a real kernel.",
+            "id": "learning",
+            "media": []
           }
-        ]
+        ],
+        "cardTitle": "Exploring how Linux schedules work"
       },
       "ja": {
         "workType": "技術分析・実験",
-        "summary": "Linuxカーネルのスケジューリングと動作を探究",
+        "summary": "実際のカーネルソースを読み、方針やnice値の実験を通じて実行順序が決まる過程を調べました。",
         "description": "自作ソフトウェアではなく、カーネルソースの分析・実験事例です。miniOS実装と区別し、実際のLinuxのスケジューリング・プロセス・同期コードを調査しました。",
         "highlights": [
           "スケジューリングの流れと関連データ構造の分析",
@@ -305,22 +380,31 @@ export const projects = [
         ],
         "caseStudy": [
           {
-            "title": "目的",
-            "body": "OSの理論がLinuxカーネルにどう表現されるかを、ソースと実験から調べました。"
+            "title": "課題と目標",
+            "body": "OSの理論がLinuxカーネルにどう表現されるかを、ソースと実験から調べました。",
+            "id": "goal",
+            "media": []
           },
           {
-            "title": "取り組んだ内容",
-            "body": "スケジューリングと関連構造を分析し、プロセス・同期コードを調査。方針やnice値の実験を行いました。"
+            "title": "実装・分析の過程",
+            "body": "スケジューリングと関連構造を分析し、プロセス・同期コードを調査。方針やnice値の実験を行いました。",
+            "id": "process",
+            "media": []
           },
           {
-            "title": "結果",
-            "body": "実験結果を通じてシステム動作を観察しました。性能改善の実装としては扱わず、定量的な改善値も記載していません。"
+            "title": "結果と検証",
+            "body": "実験結果を通じてシステム動作を観察しました。性能改善の実装としては扱わず、定量的な改善値も記載していません。",
+            "id": "verification",
+            "media": []
           },
           {
             "title": "学んだこと",
-            "body": "学習用実装と実際のカーネルを見比べ、理論、コードの流れ、観察結果を結び付ける練習をしました。"
+            "body": "学習用実装と実際のカーネルを見比べ、理論、コードの流れ、観察結果を結び付ける練習をしました。",
+            "id": "learning",
+            "media": []
           }
-        ]
+        ],
+        "cardTitle": "Linuxが処理を実行する仕組みを探究"
       }
     }
   }

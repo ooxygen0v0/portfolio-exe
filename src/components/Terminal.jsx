@@ -51,7 +51,7 @@ function Terminal() {
 
       <div ref={historyRef} className="h-72 min-w-0 overflow-y-auto p-3 font-mono text-xs leading-relaxed sm:h-80 sm:p-5 sm:text-sm">
         <p className="break-words text-cyan-400 [overflow-wrap:anywhere]">{t('terminal.welcome')}</p>
-        <p className="mt-2 break-words text-slate-500 [overflow-wrap:anywhere]">{t('terminal.hint')}</p>
+        <p className="mt-2 break-words text-slate-400 [overflow-wrap:anywhere]">{t('terminal.hint')}</p>
 
         <div className="mt-6 space-y-5">
           {history.map((item) => {

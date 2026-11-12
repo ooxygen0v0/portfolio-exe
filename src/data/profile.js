@@ -28,7 +28,7 @@ export const profile = {
           "label": "Background",
           "title": "관심과 학습 방향",
           "paragraphs": [
-            "저는 대한민국에서 컴퓨터공학을 공부하는 대학생으로, 2026년 현재 2학년입니다. Python, C, Java를 통해 프로그래밍의 기초를 익히고 React와 Node.js로 웹 개발을 공부하고 있습니다. 시스템 프로그래밍과 웹 개발, 데이터 처리를 직접 경험하며 더 깊이 다루고 싶은 문제를 찾고 있습니다. 이 포트폴리오에는 그동안 시도한 작업과 그 과정에서 배운 내용을 담았습니다."
+            "2026년 현재 컴퓨터공학과 2학년으로 Python, C, Java와 React·Node.js를 공부하고 있습니다. 이 포트폴리오에는 직접 시도한 작업과 배운 내용을 담았습니다."
           ]
         },
         {
@@ -36,7 +36,7 @@ export const profile = {
           "label": "Experience",
           "title": "현장에서 배운 IT",
           "paragraphs": [
-            "전공 학습에 앞서 2020년 5월부터 2021년 11월까지 대한민국 육군 카투사로 복무했습니다. IMO / MOS 25B 보직에서 IT 인프라 구축 관련 업무와 Help Desk 사용자 지원, CAC 관련 업무를 경험했습니다. 영어로 업무 내용을 전달하고 어학·통역을 지원하는 일도 맡았습니다. 사용자의 상황을 이해하고 필요한 내용을 정확하게 전달하는 것도 IT 업무의 중요한 부분임을 배웠습니다. 당시의 실무 경험은 이후 전공에서 배우는 개념을 실제 사용 환경과 연결해 생각하는 바탕이 되었습니다."
+            "카투사 IT 실무에서 사용자의 상황을 이해하고 필요한 내용을 정확하게 전달하는 일이 중요하다는 점을 배웠습니다. 당시의 경험은 이후 전공에서 배우는 개념을 실제 사용 환경과 연결해 생각하는 바탕이 되었습니다."
           ]
         },
         {
@@ -45,7 +45,7 @@ export const profile = {
           "title": "이론을 코드로 확인하기",
           "paragraphs": [
             "2025년부터는 프로그래밍과 컴퓨터공학의 기초를 공부하고, 2026년에는 자료구조와 컴퓨터구조를 통해 프로그램의 내부 동작을 살펴보았습니다. 자료구조를 배우면서 데이터의 저장 방식과 알고리즘의 처리 과정이 서로 연결되어 있다는 점에 관심을 갖게 되었습니다. 코드의 실행 순서와 상태 변화를 따라가며 개념이 실제로 어떻게 동작하는지 이해하려고 합니다.",
-            "운영체제 miniOS 실습에서는 Round-Robin 스케줄러와 READY 큐, 세마포어와 뮤텍스를 구현했습니다. 스케줄링 정책뿐 아니라 프로세스 상태와 큐의 일관성을 함께 관리해야 한다는 점을 배웠고, Lab03 13/13과 Lab04 16/16 테스트로 기능을 확인했습니다. Linux 커널 소스의 스케줄링 흐름과 관련 자료구조를 분석하고, 스케줄링 정책과 nice 값에 관한 실험도 진행했습니다. 학습용 구현과 실제 커널을 함께 살펴보며 이론, 코드, 관찰 결과를 연결하고 있습니다."
+            "운영체제 miniOS 실습에서는 CPU가 다음에 실행할 작업을 고르는 Round-Robin 스케줄러와 READY 큐, 공유 자원 접근을 조정하는 세마포어와 뮤텍스를 구현했습니다. 프로세스 상태와 큐의 일관성을 함께 관리하고, 테스트로 동작을 확인했습니다. Linux 커널 소스와 스케줄링 정책·nice 값 실험을 통해 이론, 코드, 관찰 결과를 연결했습니다. 구체적인 검증 결과는 프로젝트 상세에서 확인할 수 있습니다."
           ]
         },
         {
@@ -61,7 +61,7 @@ export const profile = {
           "label": "Next Step",
           "title": "다음 공부와 진로 탐색",
           "paragraphs": [
-            "데이터 분야에서는 Python과 Pandas를 학습하고 있으며, NumPy를 공부해 데이터 정제와 분석 프로젝트로 이어 가고 싶습니다. 앞으로도 시스템·웹·데이터 분야를 탐색하면서 관심을 구체화하고, 이해한 내용을 구현과 테스트로 확인하는 방식을 이어 가려 합니다. 영어로 업무를 수행했던 경험과 일본어 역량도 국제적인 기술 환경에서 활용하는 데 관심이 있습니다. 이러한 학습과 프로젝트를 이어 가며 저에게 맞는 진로를 구체화해 가겠습니다."
+            "Python과 Pandas 학습을 NumPy와 데이터 정제·분석 프로젝트로 이어 가고 싶습니다. 시스템·웹·데이터 분야의 프로젝트를 통해 진로를 구체화하고, 영어 업무 경험과 일본어 역량도 국제적인 기술 환경에서 활용하고 싶습니다."
           ]
         }
       ],
@@ -97,7 +97,7 @@ export const profile = {
           "label": "Background",
           "title": "Interests and direction",
           "paragraphs": [
-            "I am a second-year Computer Engineering student in South Korea in 2026. I am learning programming through Python, C, and Java, and exploring web development with React and Node.js. I am exploring systems programming, web development, and data processing to find the problems I want to study more deeply. This portfolio records the work I have tried and what I have learned along the way."
+            "I am a second-year Computer Engineering student in 2026, studying Python, C, Java, React and Node.js. This portfolio records the work I have tried and what I learned."
           ]
         },
         {
@@ -105,7 +105,7 @@ export const profile = {
           "label": "Experience",
           "title": "IT in practice",
           "paragraphs": [
-            "Before my degree studies, I served in the Republic of Korea Army as a KATUSA from May 2020 to November 2021. In an IMO / MOS 25B role, I worked on IT infrastructure tasks, Help Desk support, and CAC-related work, and used English for communication and language and interpretation support. I learned that understanding users and communicating clearly are important parts of IT work. That practical experience gave me a foundation for connecting concepts from my later studies with real usage environments."
+            "Practical IT work as a KATUSA taught me the importance of understanding users and communicating clearly. It gave me a foundation for connecting concepts from my later studies with real usage environments."
           ]
         },
         {
@@ -114,7 +114,7 @@ export const profile = {
           "title": "Connecting theory and code",
           "paragraphs": [
             "I began studying programming and computing fundamentals in 2025. In 2026, data structures and computer architecture helped me examine how programs work internally. I became interested in the relationship between data representation and algorithm execution. I follow execution order and changes in state to understand how concepts work in actual code.",
-            "In miniOS, I implemented a Round-Robin scheduler, a READY queue, semaphores, and mutexes. I learned to maintain consistency between process states and queue contents, passing 13/13 Lab03 and 16/16 Lab04 tests. I also analyzed Linux kernel scheduling code and related data structures, and ran experiments involving scheduling policies and nice values. Looking at both a learning implementation and a real kernel helps me connect theory, code, and observations."
+            "In miniOS, I implemented a Round-Robin scheduler and READY queue to choose which task uses the CPU next, plus semaphores and mutexes to coordinate shared resources. I managed consistency between process states and queues and checked behavior through tests. Linux source analysis and experiments with policies and nice values helped connect theory, code and observations. Verification details are available on the project page."
           ]
         },
         {
@@ -130,7 +130,7 @@ export const profile = {
           "label": "Next Step",
           "title": "Learning ahead and exploring a career",
           "paragraphs": [
-            "I am studying Python and Pandas and plan to learn NumPy for a data cleaning and analysis project. I want to keep exploring systems, web, and data, refining my interests through implementation and tests. I am also interested in using my English work experience and Japanese skills in international technical settings. Through continued study and projects, I want to develop a clearer sense of the career path that suits me."
+            "I want to extend my Python and Pandas studies into NumPy and data cleaning and analysis projects. Projects across systems, web and data will help clarify my career direction. I also hope to use my English work experience and Japanese skills in international technical settings."
           ]
         }
       ],
@@ -166,7 +166,7 @@ export const profile = {
           "label": "Background",
           "title": "関心と学習の方向",
           "paragraphs": [
-            "私は韓国でコンピュータ工学を学ぶ大学生で、2026年現在は2年生です。Python、C、Javaで基礎を学び、ReactとNode.jsでWeb開発にも取り組んでいます。システムプログラミング、Web開発、データ処理を実際に試し、深く取り組みたい問題を探しています。このポートフォリオには、これまでの取り組みと、その過程で学んだことをまとめました。"
+            "2026年現在、コンピュータ工学科の2年生としてPython、C、JavaとReact・Node.jsを学んでいます。このポートフォリオには実際の取り組みと学びをまとめました。"
           ]
         },
         {
@@ -174,7 +174,7 @@ export const profile = {
           "label": "Experience",
           "title": "現場で学んだIT",
           "paragraphs": [
-            "専攻の学習以前に、2020年5月から2021年11月まで韓国陸軍のKATUSAとして服務しました。IMO / MOS 25Bの職務でITインフラ構築関連業務、Help Deskでの利用者支援、CAC関連業務を経験し、英語での業務連絡や語学・通訳支援も担当しました。利用者の状況を理解し、必要な情報を正確に伝えることもIT業務の重要な部分だと学びました。この実務経験は、その後に専攻で学ぶ概念を実際の利用環境と結び付けて考える土台になっています。"
+            "KATUSAでのIT実務を通じ、利用者の状況を理解し、必要な情報を正確に伝える重要性を学びました。その経験は、専攻で学ぶ概念を実際の利用環境と結び付けて考える土台です。"
           ]
         },
         {
@@ -183,7 +183,7 @@ export const profile = {
           "title": "理論とコードをつなぐ",
           "paragraphs": [
             "2025年からプログラミングとコンピュータ工学の基礎を学び、2026年にはデータ構造やコンピュータアーキテクチャを通じてプログラムの内部動作を考えました。データの保持方法とアルゴリズムの処理過程の関係に関心を持ち、コードの実行順序や状態の変化を追い、概念が実際にどう動くのかを理解するようにしています。",
-            "miniOS実習ではRound-Robinスケジューラ、READYキュー、セマフォ、ミューテックスを実装しました。プロセス状態とキューの整合性を保つ重要性を学び、Lab03で13/13件、Lab04で16/16件のテストに合格しました。Linuxカーネルのスケジューリング処理と関連データ構造も分析し、スケジューリング方針やnice値の実験を行いました。学習用の実装と実際のカーネルを見比べ、理論・コード・観察結果を結び付けています。"
+            "miniOS実習では、CPUが次に実行する処理を選ぶRound-RobinスケジューラとREADYキュー、共有資源のアクセスを調整するセマフォとミューテックスを実装しました。状態とキューの整合性を管理し、テストで動作を確認。Linuxのソース分析と方針・nice値の実験で、理論とコード、観察結果を結び付けました。検証結果はプロジェクト詳細で確認できます。"
           ]
         },
         {
@@ -199,7 +199,7 @@ export const profile = {
           "label": "Next Step",
           "title": "次の学習と進路の探究",
           "paragraphs": [
-            "データ分野ではPythonとPandasを学習中で、今後はNumPyを学び、データの整形・分析プロジェクトに進みたいと考えています。システム・Web・データを探究し、実装とテストで理解を確かめながら関心を具体化していきます。英語での業務経験と日本語力を国際的な技術環境で活用することにも関心があります。学習とプロジェクトを続けながら、自分に合う進路を具体化していきたいと考えています。"
+            "Python・Pandas学習をNumPyとデータ整形・分析プロジェクトにつなげたいと考えています。システム・Web・データの取り組みを通じて進路を具体化し、英語での業務経験と日本語力も国際的な技術環境で活用したいと思います。"
           ]
         }
       ],

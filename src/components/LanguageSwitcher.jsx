@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 function LanguageSwitcher() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   function handleLanguageChange(event) {
     i18n.changeLanguage(event.target.value)
@@ -9,11 +9,11 @@ function LanguageSwitcher() {
 
   return (
     <select
-      aria-label="Select language"
+      aria-label={t('ux.selectLanguage')}
       value={i18n.resolvedLanguage || i18n.language}
       onChange={handleLanguageChange}
       className="
-        cursor-pointer rounded-lg
+        min-h-11 max-w-full cursor-pointer rounded-lg
         border border-slate-300 bg-white
         px-3 py-2 text-sm text-slate-800
         outline-none transition-colors
