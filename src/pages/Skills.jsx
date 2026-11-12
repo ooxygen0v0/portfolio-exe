@@ -4,6 +4,9 @@ import { categories, skills } from '../data/skills'
 import { getLocalized } from '../utils/getLocalized'
 import SkillCard from '../components/SkillCard'
 import Reveal from '../components/Reveal'
+import { projects, archivedProjects } from '../data/projects'
+
+const skillProjects = { C: 'minios', Linux: 'linux-kernel-analysis', JavaScript: 'portfolio-exe', 'HTML & CSS': 'portfolio-exe', React: 'portfolio-exe', 'Tailwind CSS': 'portfolio-exe' }
 
 function Skills() {
   const { t, i18n } = useTranslation()
@@ -49,6 +52,8 @@ function Skills() {
               name={skill.name}
               description={getLocalized(skill, language).description}
               category={t(`skills.categories.${skill.category}`)}
+              project={projects.find(item => item.id === skillProjects[skill.name])}
+              usage={skill.name === 'Java' ? archivedProjects.find(item => item.id === 'campus-scheduler')?.title : ['Node.js', 'Express', 'SQLite'].includes(skill.name) ? archivedProjects.find(item => item.id === 'nodebird')?.title : undefined}
             />
           </Reveal>
         ))}

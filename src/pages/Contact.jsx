@@ -1,31 +1,19 @@
-import { useState } from 'react'
 import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 
 import Reveal from '../components/Reveal'
+import CopyButton from '../components/CopyButton'
 import { githubUsername } from '../config/github'
 import { contactEmail } from '../config/contact'
 
 function Contact() {
   const { t } = useTranslation()
-  const [copyStatus, setCopyStatus] = useState('idle')
 
   const username = githubUsername.trim()
   const githubUrl = username
     ? `https://github.com/${encodeURIComponent(username)}`
     : null
   const email = contactEmail.trim()
-
-  async function handleCopy() {
-    if (!githubUrl) return
-
-    try {
-      await navigator.clipboard.writeText(githubUrl)
-      setCopyStatus('success')
-    } catch {
-      setCopyStatus('error')
-    }
-  }
 
   return (
     <main className="mx-auto max-w-6xl min-w-0 px-4 py-12 sm:px-6 sm:py-20">
@@ -65,20 +53,10 @@ function Contact() {
                 >
                   {t('contact.openGithub')} ↗
                 </a>
-                <button
-                  type="button"
-                  onClick={handleCopy}
-                  className="min-h-11 rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-medium text-slate-700 transition-colors hover:border-sky-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-cyan-400"
-                >
-                  {t('contact.copyLink')}
-                </button>
+                <CopyButton value={githubUrl} label={t('contact.copyLink')} success={t('contact.copied')} failure={t('contact.copyFailed')} />
               </div>
             )}
 
-            <p role="status" aria-live="polite" className="mt-3 text-sm text-sky-700 dark:text-cyan-400">
-              {copyStatus === 'success' && t('contact.copied')}
-              {copyStatus === 'error' && t('contact.copyFailed')}
-            </p>
           </article>
         </Reveal>
 
@@ -95,13 +73,14 @@ function Contact() {
               <p className="mt-5 wrap-break-word font-mono text-sm text-slate-700 dark:text-slate-300">
                 {email}
               </p>
-              <div className="mt-auto pt-8">
+              <div className="mt-auto flex flex-col gap-3 pt-8 sm:flex-row sm:flex-wrap">
                 <a
                   href={`mailto:${email}`}
                   className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-300 sm:w-auto"
                 >
                   {t('contact.sendEmail')} ↗
                 </a>
+                <CopyButton value={email} label={t('ux.copyEmail')} success={t('ux.emailCopied')} failure={t('ux.emailFailed')} />
               </div>
             </article>
           </Reveal>
@@ -116,7 +95,7 @@ function Contact() {
           <p className="mt-4 text-slate-600 dark:text-slate-400">
             {t('contact.projectsDescription')}
           </p>
-          <Link to="/projects" className="mt-6 inline-flex items-center gap-2 font-medium text-sky-700 hover:text-sky-900 dark:text-cyan-400 dark:hover:text-cyan-300">
+          <Link to="/projects" className="mt-6 inline-flex min-h-11 items-center gap-2 font-medium text-sky-700 hover:text-sky-900 dark:text-cyan-400 dark:hover:text-cyan-300">
             {t('contact.viewProjects')} <span aria-hidden="true">→</span>
           </Link>
         </section>

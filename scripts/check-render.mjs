@@ -13,6 +13,9 @@ try {
   const { default: About } = await server.ssrLoadModule('/src/pages/About.jsx')
   const { default: Projects } = await server.ssrLoadModule('/src/pages/Projects.jsx')
   const { default: ProjectDetail } = await server.ssrLoadModule('/src/pages/ProjectDetail.jsx')
+  const { default: Home } = await server.ssrLoadModule('/src/pages/Home.jsx')
+  const { default: Contact } = await server.ssrLoadModule('/src/pages/Contact.jsx')
+  const { default: Skills } = await server.ssrLoadModule('/src/pages/Skills.jsx')
   for (const language of ['ko', 'en', 'ja']) {
     const base = JSON.parse(await readFile(new URL(`../src/locales/${language}.json`, import.meta.url), 'utf8'))
     const extra = JSON.parse(await readFile(new URL(`../src/locales/${language}-extra.json`, import.meta.url), 'utf8'))
@@ -27,6 +30,7 @@ try {
     const about = render(About, '/about', '/about')
     for (const id of ['background', 'experience', 'learning', 'development', 'next-step']) {
       assert.ok(about.includes(`id="biography-${id}"`))
+      assert.ok(about.includes(`aria-controls="biography-${id}"`))
     }
     assert.ok(about.includes('Systems / Web / Data'))
     assert.ok(about.includes('href="/projects/minios"') && about.includes('href="/projects/portfolio-exe"'))
@@ -35,7 +39,18 @@ try {
     assert.ok(about.includes('2020-05-18') && about.includes('2021-11-21'))
     assert.ok(about.includes('MOS 25B') && about.includes('SQLD') && about.includes('JLPT N2'))
     assert.ok(about.includes({ ko: '네트워크관리사 2급', en: 'Network Administrator Level 2', ja: 'ネットワーク管理士2級' }[language]))
+    assert.ok(!/Lab03|Lab04|13\/13|16\/16/.test(about))
+    const home = render(Home, '/', '/')
+    assert.ok(home.includes(extra.ux.author) && home.includes(extra.ux.degree))
+    assert.ok(!/miniOS|Lab03|Lab04|13\/13|16\/16/.test(home))
+    const contact = render(Contact, '/contact', '/contact')
+    assert.ok(contact.includes(extra.ux.copyEmail) && contact.includes('mailto:'))
+    assert.ok(!contact.includes('Campus Scheduler'))
+    const skills = render(Skills, '/skills', '/skills')
+    assert.ok(skills.includes('/projects/minios') && skills.includes('/projects/portfolio-exe'))
     const projects = render(Projects, '/projects', '/projects')
+    assert.ok(!/Lab03|Lab04|13\/13|16\/16/.test(projects))
+    assert.ok(!projects.includes('max-w-32 truncate'))
     for (const id of ['minios', 'portfolio-exe', 'linux-kernel-analysis']) assert.ok(projects.includes(`/projects/${id}`))
     for (const name of ['Campus Scheduler', 'Nodebird']) assert.ok(!projects.includes(name))
     assert.ok(projects.includes('OS Scheduling Visualizer') && projects.includes('Python Data Analysis Project') && projects.includes('Software Competition / Hackathon'))
@@ -48,9 +63,16 @@ try {
         assert.ok(detail.includes('https://ooxygen0v0.github.io/portfolio-exe/'))
       }
       if (id === 'linux-kernel-analysis') assert.ok(detail.includes({ ko: '기술 분석·실험', en: 'Technical analysis and experiments', ja: '技術分析・実験' }[language]))
+      const positions = ['goal', 'process', 'verification', 'learning'].map(stage => detail.indexOf(`id="project-${stage}"`))
+      assert.ok(positions.every((position, i) => position >= 0 && (i === 0 || position > positions[i - 1])))
+      if (id === 'minios') {
+        const resultsPosition = detail.indexOf('13/13')
+        assert.ok(resultsPosition > positions[2] && resultsPosition < positions[3])
+        assert.ok(detail.includes('16/16') && detail.includes(extra.ux.testRecord))
+      }
     }
     assert.ok(render(ProjectDetail, '/projects/missing', '/projects/:id').includes(extra.projects.notFound))
-    console.log(`${language}: About / Projects / 대표 작업 상세 3개 / 미존재 ID 렌더링 통과`)
+    console.log(`${language}: Home / About / Contact / Skills / Projects / 상세 3개 / 미존재 ID 렌더링 통과`)
   }
 } finally {
   await server.close()

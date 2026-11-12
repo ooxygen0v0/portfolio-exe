@@ -6,3 +6,32 @@
 body {
   margin: 0;
 }
+
+/* 양쪽 테마에서 키보드 위치를 일관되게 표시합니다. */
+:where(a, button, select, input, summary, [tabindex]):focus-visible {
+  outline: 2px solid #0369a1 !important;
+  outline-offset: 4px;
+}
+.dark :where(a, button, select, input, summary, [tabindex]):focus-visible {
+  outline-color: #22d3ee !important;
+}
+
+/* 긴 기술명과 연락처도 카드 너비 안에서 줄바꿈합니다. */
+main :where(p, li, span, a, button, h1, h2, h3, h4) {
+  overflow-wrap: anywhere;
+}
+
+/* 작은 보조 문구는 밝은 배경에서도 AA 대비를 확보합니다. */
+@layer utilities {
+  .text-slate-500 { color: #475569; }
+  .dark .text-slate-500 { color: #94a3b8; }
+}
+
+:where(button, select, input) {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-all { transition-property: color, background-color, border-color; }
+}

@@ -19,6 +19,7 @@ function Projects() {
     const content = getLocalized(project, language)
     const searchText = [
       project.title,
+      content.cardTitle,
       content.summary,
       content.description,
       ...project.technologies,

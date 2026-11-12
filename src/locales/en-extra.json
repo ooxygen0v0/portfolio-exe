@@ -83,7 +83,7 @@
     "emailDescription": "You can contact me by email.",
     "sendEmail": "Send Email",
     "projectsTitle": "Interested in My Projects?",
-    "projectsDescription": "Explore my work in operating systems, Java, and web development.",
+    "projectsDescription": "Explore miniOS, Portfolio.exe, and Linux kernel analysis and experiments.",
     "viewProjects": "Explore Projects"
   },
   "github": {
@@ -104,5 +104,51 @@
     "mobileNavigation": "Mobile navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
+  },
+  "ux": {
+    "author": "Woo-sung Joo",
+    "degree": "Computer Engineering",
+    "homeExperience": "With practical IT experience from my KATUSA service, I now study Computer Engineering and build operating-system exercises and web applications.",
+    "overview": "Experience at a glance",
+    "sections": "Jump to a section",
+    "tests": "Functional test results by assignment",
+    "passed": "passed",
+    "evidenceTitle": "Original test evidence",
+    "evidenceMissing": "Original test screenshots and an implementation diagram are not yet included on this page.",
+    "copyEmail": "Copy email",
+    "emailCopied": "Email address copied.",
+    "emailFailed": "Could not copy. Select and copy the displayed email address manually.",
+    "selectLanguage": "Select language",
+    "related": "Used in",
+    "study": "Learning experience",
+    "outcomes": {
+      "minios": "Implemented task scheduling and coordination of shared resources",
+      "portfolio-exe": "Built three-language UI, themes and terminal; deployed on GitHub Pages",
+      "linux-kernel-analysis": "Analyzed scheduling code; experimented with policies and nice values"
+    },
+    "summary": [
+      {
+        "title": "KATUSA · IT practice",
+        "detail": "IMO / MOS 25B · 2020–2021",
+        "target": "experience"
+      },
+      {
+        "title": "Operating systems · Hands-on implementation",
+        "detail": "Learning task scheduling and synchronization",
+        "target": "learning"
+      },
+      {
+        "title": "Portfolio.exe · Web development",
+        "detail": "React · 3 languages · GitHub Pages",
+        "target": "development"
+      }
+    ],
+    "transitions": [
+      "I experienced the environments where IT is used, learning the importance of user support and communication.",
+      "After practical IT work, I began studying programming and computing fundamentals, moving toward understanding technology through code.",
+      "My focus expanded from basic coding to data structures and computer architecture, including the internal processes behind results.",
+      "I moved from concepts to implementation, experiments and deployment, checking understanding through tests and observations and connecting my learning in a website."
+    ],
+    "testRecord": "Based on the existing lab record. Individual test details can be added alongside the original evidence."
   }
 }

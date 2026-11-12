@@ -18,7 +18,7 @@ function Navbar() {
   const toggleRef = useRef(null)
 
   const desktopLinkClass = ({ isActive }) =>
-    `whitespace-nowrap rounded-md px-2 py-2 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 ${
+    `inline-flex min-h-11 min-w-11 items-center justify-center whitespace-nowrap rounded-md px-2 py-2 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 dark:focus-visible:outline-cyan-400 ${
       isActive
         ? 'font-semibold text-sky-700 dark:text-cyan-400'
         : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'

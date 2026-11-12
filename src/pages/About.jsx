@@ -4,6 +4,7 @@ import ProfileStory from '../components/ProfileStory'
 import { profile } from '../data/profile'
 import { aboutLayout } from '../data/aboutLayout'
 import { getLocalized } from '../utils/getLocalized'
+import SectionJump from '../components/SectionJump'
 
 function About() {
   const { t, i18n } = useTranslation()
@@ -21,6 +22,15 @@ function About() {
             {[copy.degree, 'KATUSA · IMO / MOS 25B', 'Systems / Web / Data'].map(item => <li key={item} className="border-l-2 border-sky-600 pl-3 dark:border-cyan-400">{item}</li>)}
           </ul>
         </Reveal>
+      </section>
+      <section aria-labelledby="experience-overview" className="pt-10">
+        <h2 id="experience-overview" className="text-lg font-semibold">{t('ux.overview')}</h2>
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {t('ux.summary', { returnObjects: true }).map(item => <SectionJump key={item.target} target={item.target} className="rounded-xl border border-slate-200 bg-white p-5 transition-colors hover:border-sky-700 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-cyan-400"><span className="block font-semibold">{item.title} <span aria-hidden="true">→</span></span><span className="mt-3 block text-sm leading-7 text-slate-600 dark:text-slate-400">{item.detail}</span></SectionJump>)}
+        </div>
+        <nav aria-label={t('ux.sections')} className="mt-6 flex flex-wrap gap-2">
+          {content.biography.map(section => <SectionJump key={section.id} target={section.id} className="rounded-lg border border-slate-300 px-3 py-2 font-mono text-sm text-sky-700 dark:border-slate-700 dark:text-cyan-400">{section.label} <span aria-hidden="true">→</span></SectionJump>)}
+        </nav>
       </section>
       <ProfileStory />
     </main>
