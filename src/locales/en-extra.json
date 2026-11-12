@@ -13,7 +13,7 @@
   },
   "projects": {
     "title": "Featured Projects",
-    "intro": "Explore projects I've built and exercises I've completed during my studies.",
+    "intro": "Projects I built and technical analysis cases. Future plans are shown separately below.",
     "searchLabel": "Search Projects",
     "searchPlaceholder": "Search by project or technology...",
     "count": "Showing {{visible}} of {{total}} projects",
@@ -29,7 +29,12 @@
       "web": "Web",
       "systems": "Systems",
       "java": "Java"
-    }
+    },
+    "featuredTitle": "Featured work · Implementation and analysis",
+    "viewLive": "View live site",
+    "categoryLabel": "Project categories",
+    "futureTitle": "Upcoming Projects & Challenges",
+    "futureIntro": "These are future plans and opportunities being explored, separate from completed work. Technology lists are provisional."
   },
   "terminal": {
     "welcome": "Welcome to Portfolio.exe Terminal.",

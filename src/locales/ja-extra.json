@@ -13,7 +13,7 @@
   },
   "projects": {
     "title": "プロジェクト",
-    "intro": "これまでに開発したプロジェクトや、学習の中で取り組んだ実習を紹介します。",
+    "intro": "実装したプロジェクトと技術分析・実験を紹介します。今後の計画は別のセクションに分けています。",
     "searchLabel": "プロジェクト検索",
     "searchPlaceholder": "プロジェクト名や技術を検索...",
     "count": "全{{total}}件中{{visible}}件を表示",
@@ -29,7 +29,12 @@
       "web": "Web",
       "systems": "システム",
       "java": "Java"
-    }
+    },
+    "featuredTitle": "代表的な取り組み · 実装と分析",
+    "viewLive": "公開サイトを見る",
+    "categoryLabel": "プロジェクトのカテゴリ",
+    "futureTitle": "今後のプロジェクトと挑戦",
+    "futureIntro": "以下は今後の計画や参加検討の段階です。完了した取り組みとは区別し、技術は予定として記載しています。"
   },
   "terminal": {
     "welcome": "Portfolio.exe ターミナルへようこそ。",

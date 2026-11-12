@@ -9,7 +9,8 @@ import { dirname, extname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { projects, projectCategories } from '../src/data/projects.js'
 import { skills, categories } from '../src/data/skills.js'
-import { profile, experiences, certifications } from '../src/data/profile.js'
+import { profile, professionalExperience, experiences, learningStories, languageExperiences, certifications } from '../src/data/profile.js'
+import { futureProjects, futureProjectStatuses } from '../src/data/futureProjects.js'
 import { getLocalized } from '../src/utils/getLocalized.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -170,6 +171,42 @@ if (!isObject(profile) || !Array.isArray(experiences) || !Array.isArray(certific
   }
   ok(`자기소개, 활동 ${experiences.length}개, 자격증 ${certifications.length}개 확인`)
 }
+
+// v1.1 콘텐츠 계약: 실무 경력·보유 자격·완료 작업과 계획의 구분을 검사합니다.
+if (professionalExperience.startDate !== '2020-05-18' || professionalExperience.endDate !== '2021-11-21') fail('KATUSA 복무 기간 확인 필요')
+if (!certifications.some(item => item.id === 'network-admin-2')) fail('네트워크관리사 2급 누락')
+checkUnique(certifications, '자격증')
+checkUnique(futureProjects, '향후 계획')
+const expectedWork = ['minios', 'portfolio-exe', 'linux-kernel-analysis']
+if (projects.length !== expectedWork.length || expectedWork.some(id => !projects.some(item => item.id === id))) fail('v1.1 대표 작업 구성이 요청과 다릅니다')
+if (projects.find(item => item.id === 'linux-kernel-analysis')?.kind !== 'analysis') fail('Linux 작업은 분석·실험으로 구분해야 합니다')
+const portfolioProject = projects.find(item => item.id === 'portfolio-exe')
+if (portfolioProject?.githubUrl !== 'https://github.com/ooxygen0v0/portfolio-exe' || portfolioProject?.liveUrl !== 'https://ooxygen0v0.github.io/portfolio-exe/') fail('Portfolio.exe 소스/배포 링크 확인 필요')
+for (const language of languages) {
+  const content = profile.translations?.[language]
+  const sectionIds = ['background', 'experience', 'learning', 'development', 'next-step']
+  if (!Array.isArray(content?.biography) || content.biography.length !== 5 || content.biography.some((section, index) => section.id !== sectionIds[index] || !nonEmptyText(section.title) || !nonEmptyText(section.label) || !Array.isArray(section.paragraphs) || !section.paragraphs.length || section.paragraphs.some(text => !nonEmptyText(text)))) fail(`${language}: 자기소개 5개 섹션 또는 문단 누락`)
+  for (const key of ['professionalTitle', 'experienceTitle', 'learningTitle', 'certificationTitle', 'languageTitle']) {
+    if (!nonEmptyText(content?.[key])) fail(`${language}: About 제목 누락 ${key}`)
+  }
+  const professional = professionalExperience.translations?.[language]
+  if (!nonEmptyText(professional?.period) || professional?.responsibilities?.length !== 4) fail(`${language}: KATUSA 업무/기간 누락`)
+  for (const item of [...learningStories, ...languageExperiences]) {
+    if (!nonEmptyText(item.translations?.[language]?.title) || !nonEmptyText(item.translations?.[language]?.description)) fail(`${item.id}/${language}: 학습·어학 콘텐츠 누락`)
+  }
+  for (const item of projects) if (!nonEmptyText(item.translations?.[language]?.workType)) fail(`${item.id}/${language}: 작업 유형 누락`)
+  for (const item of futureProjects) {
+    const text = item.translations?.[language]
+    if (!futureProjectStatuses.includes(item.status)) fail(`${item.id}: 알 수 없는 계획 상태`)
+    if (!nonEmptyText(text?.statusLabel) || !nonEmptyText(text?.description) || !text?.goals?.length) fail(`${item.id}/${language}: 계획 콘텐츠 누락`)
+    if (projects.some(project => project.id === item.id)) fail(`${item.id}: 향후 계획이 대표 작업에 포함됨`)
+  }
+  for (const key of ['featuredTitle', 'viewLive', 'categoryLabel', 'futureTitle', 'futureIntro']) {
+    if (!nonEmptyText(dictionaries[language]?.projects?.[key])) fail(`${language}: Projects UI 누락 ${key}`)
+  }
+  if (!nonEmptyText(getLocalized(certifications.find(item => item.id === 'network-admin-2'), language).name)) fail(`${language}: 네트워크관리사 자격증 번역 누락`)
+}
+ok('v1.1 자기소개·KATUSA·자격증·대표 작업·향후 계획의 3개 언어 콘텐츠 확인')
 
 console.log(results.join('\n'))
 if (warnings.length) {

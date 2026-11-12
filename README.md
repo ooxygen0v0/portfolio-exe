@@ -29,8 +29,11 @@
 | 프로젝트 | 요약 |
 | --- | --- |
 | miniOS | 운영체제 스케줄링·동기화 구현 및 테스트 |
-| Campus Scheduler | Java 기반 시간표 관리, 충돌·이동 시간·학점 제한 검사 |
-| Nodebird | 교재 기반 Node.js/Express/SQLite 소셜 서비스 실습 |
+| Portfolio.exe | React 기반 3개 언어 포트폴리오 구현 및 GitHub Pages 배포 |
+| Linux Kernel Analysis | Linux 커널 소스 분석과 스케줄링 정책·nice 값 실험 (기술 분석 사례) |
+
+Campus Scheduler와 Nodebird는 대표 목록에서 제외하고 `src/data/projects.js`의 `archivedProjects`에 보존합니다.
+Projects 하단의 향후 계획은 대표 작업과 별도로 표시하며 상태는 수동으로 관리합니다.
 
 > 위 항목들은 포트폴리오에서 **소개하는 프로젝트**입니다. 소스코드가 모두 이 저장소에 포함되는 것은 아닙니다.
 
@@ -61,6 +64,15 @@ Windows PowerShell에서 npm 실행 정책 문제가 있는 경우 `npm` 대신 
 - `src/data/projects.js`: 프로젝트 콘텐츠와 언어별 설명
 - `src/data/skills.js`: 기술 스택 콘텐츠와 언어별 설명
 - `src/data/profile.js`: 소개, 학습·활동·자격증 콘텐츠
+- `src/data/futureProjects.js`: 향후 프로젝트·대회 탐색 계획과 상태
+
+콘텐츠 검사:
+
+```bash
+node scripts/check-content.mjs
+node scripts/step18-check.mjs
+node scripts/check-render.mjs
+```
 
 **주의:** 이 저장소는 브라우저에서 실행하는 프런트엔드 프로젝트입니다. `src`에 작성한 값은 사용자에게 노출될 수 있으므로 비밀번호, 비밀 토큰, 개인 API 키를 저장하지 마세요. GitHub 공개 API 조회에 별도 개인 토큰을 넣지 않습니다.
 
