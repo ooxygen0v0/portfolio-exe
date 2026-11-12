@@ -5,6 +5,7 @@ import { getLocalized } from '../utils/getLocalized'
 import ProjectCard from '../components/ProjectCard'
 import Reveal from '../components/Reveal'
 import GitHubSection from '../components/GitHubSection'
+import FutureProjects from '../components/FutureProjects'
 
 function Projects() {
   const { t, i18n } = useTranslation()
@@ -35,7 +36,8 @@ function Projects() {
         {t('projects.intro')}
       </p>
 
-      <div className="mt-9 sm:mt-12">
+      <h2 id="featured-projects-title" className="mt-10 text-2xl font-semibold">{t('projects.featuredTitle')}</h2>
+      <div className="mt-6 sm:mt-8">
         <label htmlFor="project-search" className="mb-3 block text-sm text-slate-600 dark:text-slate-400">
           {t('projects.searchLabel')}
         </label>
@@ -49,7 +51,7 @@ function Projects() {
         />
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-2 sm:gap-3" aria-label="Project categories">
+      <div className="mt-6 flex flex-wrap gap-2 sm:gap-3" aria-label={t('projects.categoryLabel')}>
         {projectCategories.map((item) => (
           <button
             key={item.id}
@@ -67,7 +69,7 @@ function Projects() {
         ))}
       </div>
 
-      <section className="mt-9 grid min-w-0 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <section aria-labelledby="featured-projects-title" className="mt-9 grid min-w-0 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project, index) => (
           <Reveal key={project.id} delay={index * 0.1} className="h-full">
             <ProjectCard project={project} />
@@ -81,11 +83,12 @@ function Projects() {
         </div>
       )}
 
-      <p className="mt-8 font-mono text-sm text-slate-500">
+      <p role="status" aria-live="polite" className="mt-8 font-mono text-sm text-slate-500">
         {t('projects.count', { visible: filteredProjects.length, total: projects.length })}
       </p>
 
       <GitHubSection />
+      <FutureProjects />
     </main>
   )
 }

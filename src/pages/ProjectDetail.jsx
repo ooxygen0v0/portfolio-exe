@@ -41,6 +41,8 @@ function ProjectDetail() {
         <h1 className="mt-4 break-words text-3xl font-bold text-slate-900 dark:text-white sm:text-5xl">
           {project.title}
         </h1>
+        <p className="mt-4 text-sm font-medium text-sky-700 dark:text-cyan-400">{content.workType}</p>
+        {project.subtitle && <p className="mt-2 text-slate-600 dark:text-slate-400">{project.subtitle}</p>}
         <p className="mt-6 break-words text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg sm:leading-8">
           {content.description}
         </p>
@@ -107,6 +109,11 @@ function ProjectDetail() {
           className="mt-12 inline-block rounded-lg bg-cyan-400 px-6 py-3 font-medium text-slate-950 transition-colors hover:bg-cyan-300"
         >
           {t('projects.viewGithub')} ↗
+        </a>
+      )}
+      {project.liveUrl && (
+        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-lg border border-sky-700 px-6 py-3 font-medium text-sky-700 transition-colors hover:bg-sky-50 dark:border-cyan-400 dark:text-cyan-400 dark:hover:bg-slate-800 sm:ml-4">
+          {t('projects.viewLive')} ↗
         </a>
       )}
     </main>

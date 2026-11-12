@@ -13,7 +13,7 @@
   },
   "projects": {
     "title": "프로젝트",
-    "intro": "지금까지 직접 구현한 프로젝트와 학습 과정에서 진행한 실습을 소개합니다.",
+    "intro": "직접 구현한 프로젝트와 기술 분석·실험 사례를 소개합니다. 앞으로의 계획은 별도 섹션에서 구분합니다.",
     "searchLabel": "프로젝트 검색",
     "searchPlaceholder": "프로젝트 이름이나 기술을 검색하세요...",
     "count": "전체 {{total}}개 중 {{visible}}개 표시",
@@ -29,7 +29,12 @@
       "web": "웹",
       "systems": "시스템",
       "java": "Java"
-    }
+    },
+    "featuredTitle": "대표 작업 · 구현과 분석",
+    "viewLive": "배포 사이트 보기",
+    "categoryLabel": "프로젝트 카테고리",
+    "futureTitle": "앞으로의 프로젝트와 도전",
+    "futureIntro": "아래 항목은 향후 계획과 참가 탐색 단계이며, 완료한 작업과 구분합니다. 기술 목록은 예상 기술입니다."
   },
   "terminal": {
     "welcome": "Portfolio.exe 터미널에 오신 것을 환영합니다.",
