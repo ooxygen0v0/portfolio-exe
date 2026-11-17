@@ -86,7 +86,7 @@ function Terminal() {
             autoComplete="off"
             spellCheck={false}
             aria-label={t('terminal.inputLabel')}
-            className="min-w-0 flex-1 bg-transparent text-white caret-cyan-400 outline-none placeholder:text-slate-500 focus-visible:ring-1 focus-visible:ring-cyan-400"
+            className="min-w-0 flex-1 border-0 border-b border-transparent bg-transparent px-0 py-1 text-white caret-cyan-400 outline-none placeholder:text-slate-500 focus-visible:border-cyan-400"
             placeholder="help"
           />
         </form>
